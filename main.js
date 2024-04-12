@@ -75,7 +75,9 @@ const convertToHash = require("./method/ConvertToHash");
 
 
 
+const { MongoClient, ServerApiVersion } = require('mongodb');
 
+const uri = "mongodb+srv://parthiv:<password>@stationary.m6zourd.mongodb.net/?retryWrites=true&w=majority&appName=stationary";
 
 const client = new MongoClient(uri, {
   serverApi: {
@@ -87,50 +89,38 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    // Connect the client to the server (optional starting in v4.7)
     await client.connect();
-    // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
-    // Ensures that the client will close when you finish/error
     await client.close();
   }
 }
 
 run().catch(console.dir);
 
-// Connect to MongoDB
-mongoose.connect(uri + dbName, { bufferCommands: false }) // Append dbName to the URI
+mongoose.connect(uri, { bufferCommands: false })
   .then(() => {
     console.log('Connected to MongoDB');
-    // Place your MongoDB operations here
   })
   .catch(error => {
-    // Handle connection errors
     console.error('Error connecting to MongoDB:', error);
   });
 
-// Handling Mongoose errors
 mongoose.connection.on('error', error => {
   console.error('Mongoose connection error:', error);
 });
 
-// Handling unhandled promise rejections
 process.on('unhandledRejection', error => {
   console.error('Unhandled Promise rejection:', error);
-  // Close the MongoDB connection gracefully
   mongoose.connection.close(() => {
-    process.exit(1); // Exit the process with an error code
+    process.exit(1);
   });
 });
-
-// Handling uncaught exceptions
 process.on('uncaughtException', error => {
   console.error('Uncaught Exception:', error);
-  // Close the MongoDB connection gracefully
   mongoose.connection.close(() => {
-    process.exit(1); // Exit the process with an error code
+    process.exit(1);
   });
 });
 
