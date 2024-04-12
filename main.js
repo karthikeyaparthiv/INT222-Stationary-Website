@@ -32,56 +32,56 @@ mongoose.connect(
   const product = mongoose.model("product", productSchema);
 
 
-product.insertMany([
-  {
-    image: "Artpencils.png",
-    name: "Artpencils",
-    Price: "48",
-    id: 1,
-    quantity: 5,
-  },
-  {
-    image: "Calculator.png",
-    name: "Calculator",
-    Price: "499",
-    id: 2,
-    quantity: 10,
-  },
-  {
-    image: "Eraser.png",
-    name: "Eraser",
-    Price: "9",
-    id: 3,
-    quantity: 3,
-  },
-  {
-    image: "File.png",
-    name: "File",
-    Price: "148",
-    id: 4,
-    quantity: 5,
-  },
-  {
-    image: "Highlighter.png",
-    name: "Highlighter",
-    Price: "99",
-    id: 5,
-    quantity: 7,
-  },
-  {
-    image: "Journal.png",
-    name: "Journal",
-    Price: "399",
-    id: 6,
-    quantity: 3,
-  },
-  {
-    image: "Magnifier.png",
-    name: "Magnifier",
-    Price: "410",
-    id: 7,
-    quantity: 6,
-  },
+// product.insertMany([
+//   {
+//     image: "Artpencils.png",
+//     name: "Artpencils",
+//     Price: "48",
+//     id: 1,
+//     quantity: 5,
+//   },
+//   {
+//     image: "Calculator.png",
+//     name: "Calculator",
+//     Price: "499",
+//     id: 2,
+//     quantity: 10,
+//   },
+//   {
+//     image: "Eraser.png",
+//     name: "Eraser",
+//     Price: "9",
+//     id: 3,
+//     quantity: 3,
+//   },
+//   {
+//     image: "File.png",
+//     name: "File",
+//     Price: "148",
+//     id: 4,
+//     quantity: 5,
+//   },
+//   {
+//     image: "Highlighter.png",
+//     name: "Highlighter",
+//     Price: "99",
+//     id: 5,
+//     quantity: 7,
+//   },
+//   {
+//     image: "Journal.png",
+//     name: "Journal",
+//     Price: "399",
+//     id: 6,
+//     quantity: 3,
+//   },
+//   {
+//     image: "Magnifier.png",
+//     name: "Magnifier",
+//     Price: "410",
+//     id: 7,
+//     quantity: 6,
+//   },
   // {
   //   image: "Markers.png",
   //   name: "Markers",
@@ -194,7 +194,7 @@ product.insertMany([
   //   id: 15,
   //   quantity: 8,
   // },
-]);
+// ]);
 
 
 const cartSchema = new mongoose.Schema({
