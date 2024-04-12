@@ -7,8 +7,9 @@ const checkAuth = require("./public/middlewares/CheckAuth.js");
 const convertToHash = require("./method/ConvertToHash");
 
 mongoose.connect(
-  process.env.MONGODB_CONNECT_URI 
+  // process.env.MONGODB_CONNECT_URI 
    // "mongodb://localhost:27017/ecom",
+  "mongodb+srv://parthiv:parthiv@stationary.m6zourd.mongodb.net/?retryWrites=true&w=majority&appName=stationary" 
     );
 
 
