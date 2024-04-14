@@ -7,9 +7,9 @@ const checkAuth = require("./public/middlewares/CheckAuth.js");
 const convertToHash = require("./method/ConvertToHash");
 
 mongoose.connect(
-  // process.env.MONGODB_CONNECT_URI 
+  process.env.MONGODB_CONNECT_URI 
    // "mongodb://localhost:27017/ecom",
-  "mongodb+srv://parthiv:parthiv@stationary.m6zourd.mongodb.net/?retryWrites=true&w=majority&appName=stationary" 
+  // "mongodb+srv://parthiv:parthiv@stationary.m6zourd.mongodb.net/?retryWrites=true&w=majority&appName=stationary" 
     );
 
 
@@ -160,42 +160,42 @@ product.insertMany([
     id: 15,
     quantity: 8,
   },
-  {
-    image: "Scissor.png",
-    name: "Scissor",
-    Price: "60",
-    id: 15,
-    quantity: 8,
-  },
-  {
-    image: "Stapler.png",
-    name: "Stapler",
-    Price: "54",
-    id: 15,
-    quantity: 8,
-  },
-  {
-    image: "StickyNote.png",
-    name: "StickyNote",
-    Price: "90",
-    id: 15,
-    quantity: 8,
-  },
-  {
-    image: "Tapedispenser.png",
-    name: "Tapedispenser",
-    Price: "199",
-    id: 15,
-    quantity: 8,
-  },
-  {
-    image: "Whitner.png",
-    name: "Whitner",
-    Price: "25",
-    id: 15,
-    quantity: 8,
-  },
-]);
+  // {
+  //   image: "Scissor.png",
+  //   name: "Scissor",
+  //   Price: "60",
+  //   id: 15,
+  //   quantity: 8,
+  // },
+  // {
+  //   image: "Stapler.png",
+  //   name: "Stapler",
+  //   Price: "54",
+  //   id: 15,
+  //   quantity: 8,
+  // },
+  // {
+  //   image: "StickyNote.png",
+  //   name: "StickyNote",
+  //   Price: "90",
+  //   id: 15,
+  //   quantity: 8,
+  // },
+  // {
+  //   image: "Tapedispenser.png",
+  //   name: "Tapedispenser",
+  //   Price: "199",
+  //   id: 15,
+  //   quantity: 8,
+  // },
+  // {
+  //   image: "Whitner.png",
+  //   name: "Whitner",
+  //   Price: "25",
+  //   id: 15,
+  //   quantity: 8,
+  // },
+], { bufferMaxEntries: 0 } );
 
 
 const cartSchema = new mongoose.Schema({
