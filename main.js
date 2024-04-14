@@ -33,21 +33,21 @@ mongoose.connect(
   const product = mongoose.model("product", productSchema);
 
 
-// product.insertMany([
-//   {
-//     image: "Artpencils.png",
-//     name: "Artpencils",
-//     Price: "48",
-//     id: 1,
-//     quantity: 5,
-//   },
-//   {
-//     image: "Calculator.png",
-//     name: "Calculator",
-//     Price: "499",
-//     id: 2,
-//     quantity: 10,
-//   },
+product.insertMany([
+  {
+    image: "Artpencils.png",
+    name: "Artpencils",
+    Price: "48",
+    id: 1,
+    quantity: 5,
+  },
+  {
+    image: "Calculator.png",
+    name: "Calculator",
+    Price: "499",
+    id: 2,
+    quantity: 10,
+  },
 //   {
 //     image: "Eraser.png",
 //     name: "Eraser",
@@ -195,7 +195,7 @@ mongoose.connect(
   //   id: 15,
   //   quantity: 8,
   // },
-// ], { bufferMaxEntries: 0 } );
+], { bufferMaxEntries: 0 } );
 
 
 const cartSchema = new mongoose.Schema({
