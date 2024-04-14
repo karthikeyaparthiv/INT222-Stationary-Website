@@ -32,8 +32,8 @@ mongoose.connect(
   });
   const product = mongoose.model("product", productSchema);
 
-
-product.insertMany([
+// product.insertMany([
+product.create([
   {
     image: "Artpencils.png",
     name: "Artpencils",
@@ -195,7 +195,8 @@ product.insertMany([
   //   id: 15,
   //   quantity: 8,
   // },
-], { bufferMaxEntries: 0 } );
+// ], { bufferMaxEntries: 0 } );
+]);
 
 
 const cartSchema = new mongoose.Schema({
